@@ -1,0 +1,3 @@
+[submodule "config/capistrano-recipes"]
+	path = config/capistrano-recipes
+	url = git://github.com/hooktstudios/capistrano-recipes.git
