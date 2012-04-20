@@ -9,7 +9,17 @@ Feel free to take whatever you need.
 
 **INCOMPLETE** (Yup, Backstreet Boys song)
 
-## What's in this
+Change the \_\_YOUR\_PROJECT\_NAME\_\_ in the third line
+
+    git clone git://github.com/hooktstudios/rails-bp.git
+    cd rails-bp
+    find . -name "*.rb" -o -name "Rakefile" -o -name "*.erb" -print0 | xargs -0 -n 1 sed -i'' -e 's/RailsBP/__YOUR_PROJECT_NAME__/g'
+    git submodule update --init
+    cp config/capistrano-recipes/config-samples/unicorn.rb config/unicorn.rb
+    curl http://twitter.github.com/bootstrap/assets/css/bootstrap.css > vendor/assets/stylesheets/bootstrap.css
+
+**Edit config/deploy.rb, config/database.yml and config/unicorn.rb**
+
 ## Intended usage
 This is intended to be used as a collection of tools to start projects quickly.
 This is by no mean a perfect solution and it definitey has to be customized.
@@ -56,11 +66,16 @@ Let's stop re-inventing the wheel for admin backends. The boilerplate includes
 an helper to create admin forms which defaults to the Twitter Bootstrap SimpleForm
 wraper, and an admin base controller.
 
-Don't want no admin?
+Don't want no admin? Remove ALL THE FILES:
 
-    rm -rf app/helpers/admin app/controllers/admin app/views/layouts/admin.html.erb 
+    rm -rf app/helpers/admin app/controllers/admin app/views/layouts/admin.html.erb app/assets/stylesheets/admin.css
 
 ## Credits
 
 Credits goes to all the gems contributors. Bootstrap integration is stolen from [SimpleFormBootstrap](https://github.com/rafaelfranca/simple_form-bootstrap)
 
+## TODOs
+* Move most of this stuff to generators
+* Create a CLI tool that helps setuping the boilerplate instead of copying commands
+* Write generators for more Twitter Bootstrap admin goodness
+    * Integrate with InheritedResource or something of the like for admin DRYness?
