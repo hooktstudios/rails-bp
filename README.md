@@ -56,7 +56,7 @@ This is by no mean a perfect solution and it definitey has to be customized.
     `admin_form_for` which is a SimpleForm wrapper that defaults to Twitter's bootstrap.
     * Admin stylesheet that requires Twitter's bootstrap.
 * Misc
-    * [Kaminari](https://github.com/amatsuda/kaminari) for paging – _disabled by default_
+    * [Kaminari](https://github.com/amatsuda/kaminari) for paging
     * [Devise](https://github.com/plataformatec/devise) for authentification – _disabled by default_
     * [Sorted](https://github.com/mynameisrufus/sorted) for sorting (duh) – _disabled by default_
 

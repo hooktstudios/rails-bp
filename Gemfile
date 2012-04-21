@@ -21,6 +21,8 @@ gem 'jquery-rails'
 
 # Kaminari for sorting
 # gem "kaminari"
+# Kaminari for paging
+gem "kaminari"
 
 # Deploy with Capistrano
 gem 'capistrano'
