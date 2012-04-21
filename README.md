@@ -51,14 +51,16 @@ This is by no mean a perfect solution and it definitey has to be customized.
     * .gitignore
 * Admin goodies
     * Admin base controller (`app/controllers/admin/base_controller.rb`).
+    * [Inherited Resources](https://github.com/josevalim/inherited_resources) for DRY controller
     * Admin layout (`app/layouts/admin.html.erb`).
-    * Admin base helper (`app/helpers/admin/base_helper.rb`). Includes
-    `admin_form_for` which is a SimpleForm wrapper that defaults to Twitter's bootstrap.
+    * Admin base helper (`app/helpers/admin/base_helper.rb`). Includes :
+        * `admin_form_for` : SimpleForm wrapper that defaults to Twitter's bootstrap.
+        * `admin_paginate` : Kaminari wrapper with the Twitter's bootstrap theme.
     * Admin stylesheet that requires Twitter's bootstrap.
 * Misc
     * [Kaminari](https://github.com/amatsuda/kaminari) for paging
+    * [Sorted](https://github.com/mynameisrufus/sorted) for sorting (duh)
     * [Devise](https://github.com/plataformatec/devise) for authentification – _disabled by default_
-    * [Sorted](https://github.com/mynameisrufus/sorted) for sorting (duh) – _disabled by default_
 
 
 ### Admin
@@ -78,4 +80,3 @@ Credits goes to all the gems contributors. Bootstrap integration is stolen from 
 * Move most of this stuff to generators
 * Create a CLI tool that helps setuping the boilerplate instead of copying commands
 * Write generators for more Twitter Bootstrap admin goodness
-    * Integrate with InheritedResource or something of the like for admin DRYness?

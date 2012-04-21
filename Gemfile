@@ -19,10 +19,14 @@ gem 'jquery-rails'
 # Use devise for Auth
 # gem "devise"
 
-# Kaminari for sorting
-# gem "kaminari"
 # Kaminari for paging
 gem "kaminari"
+
+# DRY ressources (used for admin)
+gem 'inherited_resources'
+
+# Sorted for sorting
+gem 'sorted'
 
 # Deploy with Capistrano
 gem 'capistrano'
