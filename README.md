@@ -13,7 +13,7 @@ Change the \_\_YOUR\_PROJECT\_NAME\_\_ in the third line
 
     git clone git://github.com/hooktstudios/rails-bp.git
     cd rails-bp
-    find . -name "*.rb" -o -name "Rakefile" -o -name "*.erb" -print0 | xargs -0 -n 1 sed -i'' -e 's/RailsBP/__YOUR_PROJECT_NAME__/g'
+    perl -e "s/RailsBP/__YOUR_PROJECT_NAME__/g;" -pi $(find . -name "*.rb" -o -name "Rakefile" -o -name "*.erb")
     git submodule update --init
     cp config/capistrano-recipes/config-samples/unicorn.rb config/unicorn.rb
     curl http://twitter.github.com/bootstrap/assets/css/bootstrap.css > vendor/assets/stylesheets/bootstrap.css
