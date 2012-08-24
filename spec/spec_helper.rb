@@ -39,6 +39,8 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
+  # Force reload code
+  ActiveSupport::Dependencies.clear if Spork.using_spork?
   FactoryGirl.reload
 end
 
